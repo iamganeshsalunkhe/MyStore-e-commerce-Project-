@@ -10,7 +10,7 @@ const router = express.Router();
 router.post("/signin", (req, res) => {
   const { email, password } = req.body;
 
-  const encryptedPassword = crypto.SHA256(password).toString();
+  const encryptedPassword = crypto.SHA256(password);
 
   const statement = `select id , firstName, lastName, phone from admins where email = '${email}' and password = '${encryptedPassword}'`;
   db.query(statement, (err, data) => {

@@ -10,4 +10,4 @@
 --     phone varchar(20)
 -- );
 
-SELECT * FROM admins
+SELECT * FROM category
